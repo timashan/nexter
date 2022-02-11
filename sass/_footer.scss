@@ -1,0 +1,34 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start/full-end;
+  padding: 8rem 2rem;
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-items: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: all 0.5s;
+      padding: 2rem 4rem;
+    }
+    &:hover {
+      background-color: rgba($color-white, 0.05);
+    }
+  }
+}
+
+.copyright {
+  margin-top: 8rem;
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
+  text-align: center;
+}

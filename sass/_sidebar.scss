@@ -1,0 +1,34 @@
+.sidebar {
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+
+  &__icon {
+    height: 0.2rem;
+    width: 4.5rem;
+    background-color: $color-white;
+    z-index: 2;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      height: inherit;
+      width: 100%;
+      position: absolute;
+      background-color: $color-white;
+      left: 0;
+    }
+
+    &::before {
+      top: 1.5rem;
+    }
+
+    &::after {
+      top: -1.5rem;
+    }
+  }
+}

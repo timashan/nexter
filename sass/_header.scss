@@ -1,0 +1,98 @@
+.header {
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.92),
+      rgba($color-secondary, 0.92)
+    ),
+    url(../img/hero.jpeg);
+  grid-column: full-start/col-end 6;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: start;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr;
+  row-gap: 1.5rem;
+  padding: 4rem 8rem 8rem 8rem;
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  &__btn {
+    align-self: start;
+  }
+
+  &__seenon {
+    &-text {
+      width: 100%;
+      color: $color-grey-light-2;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      align-items: center;
+      column-gap: 1.5rem;
+
+      &::after,
+      &::before {
+        content: '';
+        background-color: $color-grey-light-2;
+        height: 1px;
+        width: 100%;
+      }
+    }
+
+    &-img {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      column-gap: 3rem;
+
+      img {
+        height: 2.5rem;
+        filter: brightness(0.8);
+      }
+    }
+  }
+}
+
+.realtors {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 3rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    align-items: center;
+  }
+
+  &__detail {
+    color: $color-white;
+  }
+
+  &__heading {
+    font-family: $font-display;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  &__sold {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+  }
+
+  img {
+    height: 7rem;
+    border-radius: 50%;
+  }
+}

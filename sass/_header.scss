@@ -15,6 +15,11 @@
   row-gap: 1.5rem;
   padding: 4rem 8rem 8rem 8rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/full-end;
+    padding: 4rem;
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center;
@@ -48,9 +53,11 @@
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
       column-gap: 3rem;
+      align-items: center;
 
       img {
-        height: 2.5rem;
+        max-height: 2.5rem;
+        max-width: 100%;
         filter: brightness(0.8);
       }
     }
@@ -66,6 +73,11 @@
   justify-items: center;
   gap: 3rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/full-end;
+    padding: 3rem 0;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -73,6 +85,14 @@
     column-gap: 2rem;
     row-gap: 4rem;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(6, max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(2, max-content);
+    }
   }
 
   &__detail {

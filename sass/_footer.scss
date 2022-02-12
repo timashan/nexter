@@ -1,13 +1,15 @@
 .footer {
   background-color: $color-secondary;
   grid-column: full-start/full-end;
-  padding: 8rem 2rem;
+  padding: 8rem 4rem;
 
   &__list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-items: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__link {
@@ -18,7 +20,9 @@
       text-decoration: none;
       font-size: 1.5rem;
       transition: all 0.5s;
-      padding: 2rem 4rem;
+      padding: 2rem;
+      text-align: center;
+      display: inline-block;
     }
     &:hover {
       background-color: rgba($color-white, 0.05);

@@ -6,6 +6,15 @@
   justify-content: center;
   padding-top: 4rem;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    justify-content: end;
+    padding-top: 0;
+    align-items: center;
+    padding-right: 4rem;
+  }
+
   &__icon {
     height: 0.2rem;
     width: 4.5rem;

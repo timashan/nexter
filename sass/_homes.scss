@@ -2,14 +2,14 @@
   grid-column: center-start/center-end;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   padding: 15rem 0;
   gap: 7rem;
 }
 
 .home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   row-gap: 3.5rem;
   background-color: $color-grey-light-1;
 
